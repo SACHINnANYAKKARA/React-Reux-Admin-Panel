@@ -1,0 +1,19 @@
+.list {
+     
+    border:         none;
+    border-left:    1px solid hsla(200, 10%, 50%,100);
+    height:         5vh;
+    width:          1px;       
+  
+   }
+
+   .container{
+
+    
+    overflow:left;
+
+   }
+
+   .h4{
+      float: left;
+   }
