@@ -208,7 +208,12 @@ class AddNewJob extends Component {
 
                         <Link to="/" className="btn btn-light">
                             Back to Board
+                             </Link>{}
+                        <Link to="/jobUpdateDelete" className="btn btn-light">
+                            Applied Job
                              </Link>
+
+
 
                     </form>
                     <br></br>

@@ -1,21 +1,23 @@
 import React, { Component } from "react";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { Provider } from "react-redux";
+import store from "./store";
+import { Container, Row, Col } from 'reactstrap';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+
 import NavigationBar from "./components/NavigationBar";
 import SideBarMenu from "./components/SideBarMenu";
 import ProjectBoard from "./components/ProjectBoard";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 import AddProjectTask from "./components/ProjectTask/AddProjectTask";
-import { Provider } from "react-redux";
-import store from "./store";
 import UpdateProjectTask from "./components/ProjectTask/UpdateProjectTask";
 import ProjectView from "./components/ProjectView";
 import AddProjectView from "./components/ProjectTask/AddProjectView";
 import AddNewCompany from "./components/ProjectTask/AddNewCompany";
 import AddNewJob from "./components/ProjectTask/AddNewJob";
 import AddNewDepartment from "./components/ProjectTask/AddNewDepartment";
-import { Container, Row, Col } from 'reactstrap';
-
+import DepartmentUpdateDelete from "./components/ProjectTask/DepartmentUpdateDelete";
+import JobUpdateDelete from "./components/ProjectTask/JobUpdateDelete";
 
 
 /*addProjectViewTask*/
@@ -43,6 +45,8 @@ class App extends Component {
                   <Route exact path="/addNewCompany" component={AddNewCompany} />
                   <Route exact path="/addNewJob" component={AddNewJob} />
                   <Route exact path="/addNewDepartment" component={AddNewDepartment} />
+                  <Route exact path="/departmentUpdateDelete" component={DepartmentUpdateDelete} />
+                  <Route exact path="/jobUpdateDelete" component={JobUpdateDelete} />
                 </Col>
                 <Route
                   exact

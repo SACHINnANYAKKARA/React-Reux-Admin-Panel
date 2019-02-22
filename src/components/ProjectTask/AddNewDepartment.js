@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addDepartmentTask } from "../../actions/projectDepartmentActions";
-import { Button, FormGroup, Input } from 'reactstrap';
+import { Button, FormGroup, Input,Label } from 'reactstrap';
 import classnames from "classnames";
 
 /*
@@ -69,7 +69,7 @@ class AddNewDepartment extends Component {
                     <form onSubmit={this.onSubmit}>
 
                         <FormGroup>
-
+                        <Label for="exampleCompanyName">Department Name</Label>
                             <input
                                 type="text"
                                 className={classnames("form-control ", {
@@ -87,6 +87,7 @@ class AddNewDepartment extends Component {
 
 
                         <FormGroup>
+                        <Label for="exampleCompanyName">Total Employee</Label>
                             <Input type="text"
 
                                 placeholder="Total Employee"
@@ -97,6 +98,7 @@ class AddNewDepartment extends Component {
                         </FormGroup>
 
                         <FormGroup>
+                        <Label for="exampleCompanyName">Department Telephone</Label>
                             <Input type="text"
 
                                 placeholder="Department Telephone"
@@ -107,6 +109,7 @@ class AddNewDepartment extends Component {
                         </FormGroup>
 
                         <FormGroup>
+                        <Label for="exampleCompanyName">Location</Label>
                             <Input type="text"
 
                                 placeholder="Location"
@@ -118,6 +121,7 @@ class AddNewDepartment extends Component {
 
 
                         <FormGroup>
+                        <Label for="exampleCompanyName">Department Role</Label>
                             <Input type="text"
 
                                 placeholder="Department Role"
@@ -128,6 +132,7 @@ class AddNewDepartment extends Component {
                         </FormGroup>
 
                         <FormGroup>
+                        <Label for="exampleCompanyName">Company Name</Label>
                             <Input type="text"
 
                                 placeholder="Company Name"
@@ -139,11 +144,15 @@ class AddNewDepartment extends Component {
 
 
 
-                        <Button type="submit" >Sign in</Button>
-
+                        <Button type="submit" >Sign in</Button>{}
+                        
                         <Link to="/" className="btn btn-light">
                             Back to Board
-                             </Link>
+                       </Link>{}
+                       <Link to="/departmentUpdateDelete" className="btn btn-light">
+                            Back to Board
+                       </Link>
+
                         <br></br>
                     </form>
                 </div>
