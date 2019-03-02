@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { addDepartmentTask } from "../../actions/projectDepartmentActions";
 import { Button, FormGroup, Input,Label } from 'reactstrap';
 import classnames from "classnames";
+import './Men.css';
 
 /*
   "department_name": "ds",
@@ -63,7 +64,7 @@ class AddNewDepartment extends Component {
             <div className="addDepartmentTask">
 
                 <div class="list-groups">
-
+                
                     <h4>Department</h4>
 
                     <form onSubmit={this.onSubmit}>

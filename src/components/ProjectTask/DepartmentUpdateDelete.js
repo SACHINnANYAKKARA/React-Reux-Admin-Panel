@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import { Input, FormGroup, Label, Modal, ModalHeader, ModalBody, ModalFooter, Table, Button } from 'reactstrap';
+import './Men.css';
 
 class DepartmentUpdateDelete extends Component {
 
@@ -100,7 +101,7 @@ class DepartmentUpdateDelete extends Component {
             )
         });
         return (
-            <div className="App container">
+            <div className="Appcontainer">
 
                 <Modal isOpen={this.state.editBookModal} toggle={this.toggleEditBookModal.bind(this)}>
                     <ModalHeader toggle={this.toggleEditBookModal.bind(this)}>Edit a Department</ModalHeader>

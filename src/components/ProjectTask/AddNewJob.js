@@ -5,7 +5,7 @@ import { connect } from "react-redux";
 import { addJobTask } from "../../actions/projectJobActions";
 import { Button, FormGroup, Input, Label, Row, Col } from 'reactstrap';
 import classnames from "classnames";
-
+import './Men.css';
 
 class AddNewJob extends Component {
     constructor() {

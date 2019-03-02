@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
 import axios from 'axios';
-
+import './Men.css';
 
 
 export default class AddNewCompany extends Component {
@@ -162,7 +162,7 @@ export default class AddNewCompany extends Component {
 
     render() {
         return (
-            <div class="list-groups">
+            <div class="Appcontainer">
 
                 <h4>Company Details</h4>
 

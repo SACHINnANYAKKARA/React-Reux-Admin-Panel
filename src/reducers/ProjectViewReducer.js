@@ -1,7 +1,7 @@
 import {
     GET_PROJECT_VIEWS,
-    DELETE_PROJECT_TASK,
-    GET_PROJECT_TASK
+    DELETE_PROJECT_VIEW,
+    GET_PROJECT_VIEW
   } from "../actions/types";
   
   const initialState = {
@@ -17,13 +17,13 @@ import {
           project_tasks: action.payload
         };
   
-      case GET_PROJECT_TASK:
+      case GET_PROJECT_VIEW:
         return {
           ...state,
           project_task: action.payload
         };
   
-      case DELETE_PROJECT_TASK:
+      case DELETE_PROJECT_VIEW:
         return {
           ...state,
           project_tasks: state.project_tasks.filter(

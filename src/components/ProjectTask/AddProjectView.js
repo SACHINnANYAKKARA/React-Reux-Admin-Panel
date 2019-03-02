@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { addProjectTask } from "../../actions/projectViewActions";
 import classnames from "classnames";
+import './Men.css';
 
 class AddProjectView extends Component {
   constructor() {

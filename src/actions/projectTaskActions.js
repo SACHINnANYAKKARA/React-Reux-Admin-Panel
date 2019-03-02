@@ -23,7 +23,7 @@ export const addProjectTask = (project_task, history) => async dispatch => {
 };
 
 export const getBacklog = () => async dispatch => {
-  const res = await axios.get("http://localhost:8080/api/board/all");
+  const res = await axios.get("http://localhost:8090/postajob");
   dispatch({
     type: GET_PROJECT_TASKS,
     payload: res.data

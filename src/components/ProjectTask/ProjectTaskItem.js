@@ -4,8 +4,6 @@ import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { deleteProjectTask } from "../../actions/projectTaskActions";
-
-
 import './Men.css';
 
 
@@ -20,9 +18,9 @@ class ProjectTaskItem extends Component {
       <div className="card mb-1">
         <div className="card-header text-primary">ID: {project_task.id}</div>
         <div className="card-body"> 
-           <h5 className="card-title">{project_task.summary}</h5>
+           <h5 className="card-title">{project_task.city}</h5>
           <p className="card-text text-truncate ">
-            {project_task.acceptanceCriteria}
+            {project_task.country}
           </p>
           <hr class="list"/>
           <Link
