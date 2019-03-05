@@ -204,14 +204,12 @@ class AddNewJob extends Component {
                             />
                         </FormGroup>
 
-                        <Button type="submit" >Sign in</Button>
+                        <Button type="submit" >Save Job</Button>
 
-                        <Link to="/" className="btn btn-light">
-                            Back to Board
-                             </Link>{}
-                        <Link to="/jobUpdateDelete" className="btn btn-light">
-                            Applied Job
-                             </Link>
+                         &nbsp;
+                        <Link to="/jobUpdateDelete" className="btn btn-priamry">
+                            View Job
+                         </Link>
 
 
 

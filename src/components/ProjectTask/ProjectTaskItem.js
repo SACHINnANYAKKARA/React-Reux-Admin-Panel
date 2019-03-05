@@ -15,31 +15,29 @@ class ProjectTaskItem extends Component {
   render() {
     const { project_task } = this.props;
     return (
-      <div className="card mb-1">
-        <div className="card-header text-primary">ID: {project_task.id}</div>
-        <div className="card-body"> 
-           <h5 className="card-title">{project_task.city}</h5>
-          <p className="card-text text-truncate ">
-            {project_task.country}
-          </p>
-          <hr class="list"/>
+      <div className="card mb-4">
+        <div className="card-header">ID: {project_task.id}</div>
+        <div className="card-body">
+          <h5 className="card-title text-primary">City : {project_task.city} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  Country : {project_task.country} &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; Start Date : {project_task.start_date} &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; End Date : {project_task.closing_date} &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  </h5>
+
+          <hr class="list" />
           <Link
             to={`updateProjectTask/${project_task.id}`}
             className="btn btn-primary"
           >
-            View / Update
+            View Details
           </Link>
 
           <button
             className="btn btn-danger ml-4"
             onClick={this.onDeleteClick.bind(this, project_task.id)}
           >
-            Delete
+            View a Job
           </button>
         </div>
-       
+
       </div>
-      
+
     );
   }
 }

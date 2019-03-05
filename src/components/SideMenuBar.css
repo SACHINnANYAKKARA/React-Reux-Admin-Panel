@@ -1,25 +1,38 @@
 .list-group {
      
-    margin:auto;
+    
     float:left;
-    padding-top:40px;
-    padding-left:20px;
+    background:#f7f7f7;
+   
     width: 250px;
+   
   
    }
 
+   .five ui buttons{
+    padding-left:20px;
+   }
+
+   .two{
+    width: 915px;
+   }
+
+
+   .list-group-item{
+    background:#f7f7f7;
+ 
+   }
    .lead {
     
     margin:auto;
     left:0;
     right:0;
-    padding-top:10%;
-
+    
    }
 
    .container{
 
-    padding-top:5px;
+ 
     overflow:right;
     padding-left:40px;
 

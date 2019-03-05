@@ -4,6 +4,7 @@ import ProjectTaskItem from "./ProjectTask/ProjectTaskItem";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { getBacklog } from "../actions/projectViewActions";
+import { Pagination } from 'semantic-ui-react'
 import './SideMenuBar.css';
 
 class ProjectBoard extends Component {
@@ -34,33 +35,95 @@ class ProjectBoard extends Component {
         todoItems.push(tasks);
 
         return (
-          <React.Fragment>
-            <div className="container">
-              <div className="row">
-                <div className="col-md-12">
 
-                  <Link to="/addProjectTask" className="btn btn-primary mb-3">
-                    <i className="fas fa-plus-circle"> Create Project Task</i>
-                  </Link> {}
-                  <Link to="/addProjectView" className="btn btn-primary mb-3">
-                    <i className="fas fa-plus-circle"> Create VIEW Task</i>
-                  </Link> {}
-                  <Link to="/addNewCompany" className="btn btn-primary mb-3">
-                    <i className="fas fa-plus-circle">Add New Company</i>
-                  </Link> {}
-                  <Link to="/addNewJob" className="btn btn-primary mb-3">
-                    <i className="fas fa-plus-circle"> Create Project Task</i>
-                  </Link>
+
+
+          <React.Fragment>
+            <div class="ui grid">
+
+
+
+
+              <div class="sixteen wide column">
+
+
+
+                <div class="two">
+                  <div class="five ui buttons">
+
+
+
+                    <button componentClass={Link} href="/addProjectTask" class="ui button">Project Task</button>
+                    <button componentClass={Link} href="/addProjectView" class="ui button">Project View</button>
+                    <button componentClass={Link} href="/addNewCompany" class="ui button">New Company</button>
+                    <button componentClass={Link} href="/addNewJob" class="ui button">New Job</button>
+                    <button componentClass={Link} href="/addProjectTask" class="ui button">Project Task</button>
+                    <button componentClass={Link} href="/addProjectTask" class="ui button"></button>
+
+                  </div>
 
                   <hr />
 
-                  {todoItems}
+
 
                 </div>
+              </div>
+
+              <div class="twelve wide column">
+
+                {todoItems}
+                <Pagination
+                  boundaryRange={0}
+                  defaultActivePage={1}
+                  ellipsisItem={null}
+                  firstItem={null}
+                  lastItem={null}
+                  siblingRange={1}
+                  totalPages={10}
+                />
 
 
               </div>
+
+
+              <div class="two wide column">
+                <div class="ui massive vertical menu">
+                  <a class="active item">
+                    <div class="ui small teal label">1</div>
+                    Inbox
+                 </a>
+                  <a class="item">
+                    <div class="ui small teal label">1</div>
+                    Inbox
+                 </a>
+                  <a class="item">
+                    <div class="ui small teal label">1</div>
+                    Inbox
+                 </a>
+                  <a class="item">
+                    <div class="ui small label">51</div>
+                    Spam
+                   </a>
+                  <a class="item">
+                    <div class="ui small label">1</div>
+                    Updates
+                  </a>
+
+                </div>
+              </div>
+
+
+
+              <br></br>
+
+
+
+              <h1></h1>
             </div>
+
+
+
+
           </React.Fragment>
         );
       }

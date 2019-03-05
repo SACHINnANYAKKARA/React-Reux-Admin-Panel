@@ -31,8 +31,10 @@ class App extends Component {
           <div className="App">
 
             <NavigationBar />
-
+            
             <SideBarMenu />
+
+
             <Container>
               <Row>
 

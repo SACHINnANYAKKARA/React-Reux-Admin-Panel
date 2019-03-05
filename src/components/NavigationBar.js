@@ -10,9 +10,10 @@ import {
   UncontrolledDropdown,
   DropdownToggle,
   DropdownMenu,
-  DropdownItem } from 'reactstrap';
+  DropdownItem
+} from 'reactstrap';
 
- class NavigationBar extends React.Component {
+class NavigationBar extends React.Component {
   constructor(props) {
     super(props);
 
@@ -28,41 +29,31 @@ import {
   }
   render() {
     return (
-      <div>
-        <Navbar color="light" light expand="md">
-          <NavbarBrand href="/">RecruitmentQ</NavbarBrand>
-          <NavbarToggler onClick={this.toggle} />
-          <Collapse isOpen={this.state.isOpen} navbar>
-            <Nav className="ml-auto" navbar>
-              <NavItem>
-                <NavLink href="/components/">Components</NavLink>
-              </NavItem>
-              <NavItem>
-                <NavLink href="https://github.com/reactstrap/reactstrap">GitHub</NavLink>
-              </NavItem>
-              <UncontrolledDropdown nav inNavbar>
-                <DropdownToggle nav caret>
-                  Options
-                </DropdownToggle>
-                <DropdownMenu right>
-                  <DropdownItem>
-                    Option 1
-                  </DropdownItem>
-                  <DropdownItem>
-                    Option 2
-                  </DropdownItem>
-                  <DropdownItem divider />
-                  <DropdownItem>
-                    Reset
-                  </DropdownItem>
-                </DropdownMenu>
-              </UncontrolledDropdown>
-            </Nav>
-          </Collapse>
-        </Navbar>
+      <div class="ui small menu">
+        <a class="active item">
+          Home
+  </a>
+        <a class="item">
+          Messages
+  </a>
+        <div class="right menu">
+          <div class="ui dropdown item">
+            Language <i class="dropdown icon"></i>
+            <div class="menu">
+              <a class="item">English</a>
+              <a class="item">Russian</a>
+              <a class="item">Spanish</a>
+            </div>
+          </div>
+          <div class="item">
+            <div class="ui primary button">Sign Up</div>
+          </div>
+        </div>
       </div>
     );
   }
 }
+
+
 
 export default NavigationBar;

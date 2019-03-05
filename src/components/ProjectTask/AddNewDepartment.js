@@ -145,13 +145,10 @@ class AddNewDepartment extends Component {
 
 
 
-                        <Button type="submit" >Sign in</Button>{}
-                        
-                        <Link to="/" className="btn btn-light">
-                            Back to Board
-                       </Link>{}
-                       <Link to="/departmentUpdateDelete" className="btn btn-light">
-                            Back to Board
+                      <Button type="submit" >Save Department</Button> &nbsp;
+                     
+                       <Link to="/departmentUpdateDelete" className="btn btn-primary">
+                            View Department
                        </Link>
 
                         <br></br>
