@@ -18,6 +18,7 @@ import AddNewJob from "./components/ProjectTask/AddNewJob";
 import AddNewDepartment from "./components/ProjectTask/AddNewDepartment";
 import DepartmentUpdateDelete from "./components/ProjectTask/DepartmentUpdateDelete";
 import JobUpdateDelete from "./components/ProjectTask/JobUpdateDelete";
+import ApplicantView from "./components/ProjectTask/ApplicantView";
 
 
 /*addProjectViewTask*/
@@ -49,6 +50,7 @@ class App extends Component {
                   <Route exact path="/addNewDepartment" component={AddNewDepartment} />
                   <Route exact path="/departmentUpdateDelete" component={DepartmentUpdateDelete} />
                   <Route exact path="/jobUpdateDelete" component={JobUpdateDelete} />
+                  <Route exact path="/applicantView" component={ApplicantView} />
                 </Col>
                 <Route
                   exact

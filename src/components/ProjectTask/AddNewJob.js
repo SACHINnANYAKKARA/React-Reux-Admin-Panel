@@ -65,7 +65,7 @@ class AddNewJob extends Component {
 
                 <div class="list-groups">
 
-                    <h4>Company Details</h4>
+                    <h4>Add New Job</h4>
 
                     <form onSubmit={this.onSubmit}>
 

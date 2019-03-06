@@ -26,13 +26,10 @@ class ProjectTaskItem extends Component {
           >
             View Details
           </Link>
-
-          <button
-            className="btn btn-danger ml-4"
-            onClick={this.onDeleteClick.bind(this, project_task.id)}
-          >
-            View a Job
-          </button>
+          &nbsp;
+          <Link to="/applicantView" className="btn btn-danger">
+            View Department
+          </Link>
         </div>
 
       </div>

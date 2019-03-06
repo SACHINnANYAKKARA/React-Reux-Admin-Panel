@@ -2,11 +2,14 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import classnames from "classnames";
 import PropTypes from "prop-types";
+import { Col, Row, Button, Form, FormGroup, Label, Input, FormText } from 'reactstrap';
+import { Link } from "react-router-dom";
+import './Men.css';
 import {
   getProjectTask,
   addProjectTask
 } from "../../actions/projectTaskActions";
-import './Men.css';
+
 
 class UpdateProjectTask extends Component {
   constructor() {
@@ -35,7 +38,7 @@ class UpdateProjectTask extends Component {
       this.setState({ errors: nextProps.errors });
     }
 
-    const { id, jobtitle, city, country,job_category,job_type,start_date,closing_date,expected_salary,job_description,job_responsability,requirment } = nextProps.project_task;
+    const { id, jobtitle, city, country, job_category, job_type, start_date, closing_date, expected_salary, job_description, job_responsability, requirment } = nextProps.project_task;
 
     this.setState({
       id,
@@ -80,14 +83,14 @@ class UpdateProjectTask extends Component {
       jobtitle: this.state.jobtitle,
       city: this.state.city,
       country: this.state.country,
-      job_category:this.state.job_category,
-      job_type:this.state.job_type,
-      start_date:this.state.start_date,
-      closing_date:this.state.closing_date,
-      expected_salary:this.state.expected_salary,
-      job_description:this.state.job_description,
-      job_responsability:this.state.job_responsability,
-      requirment:this.state.requirment
+      job_category: this.state.job_category,
+      job_type: this.state.job_type,
+      start_date: this.state.start_date,
+      closing_date: this.state.closing_date,
+      expected_salary: this.state.expected_salary,
+      job_description: this.state.job_description,
+      job_responsability: this.state.job_responsability,
+      requirment: this.state.requirment
     };
 
     this.props.addProjectTask(updatedTask, this.props.history);
@@ -99,47 +102,186 @@ class UpdateProjectTask extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <div className="addProjectTask">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-8 m-auto">
-              <a href="/" className="btn btn-light">
-                Back to Board
-              </a>
-              <h4 className="display-4 text-center">
-                Add /Update Project Task
-              </h4>
-              <form onSubmit={this.onSubmit}>
 
-              <div className="form-group">
-                  <textarea
-                    className="form-control form-control-lg"
-                    placeholder="Acceptance Criteria"
-                    name="jobtitle"
-                    value={this.state.jobtitle}
-                    onChange={this.onChange}
-                  />
-                </div>
+      <div class="Appcontainer">
 
-                <div className="form-group">
-                  <textarea
-                    className="form-control form-control-lg"
-                    placeholder="Acceptance Criteria"
-                    name="city"
-                    value={this.state.city}
-                    onChange={this.onChange}
-                  />
-                </div>
-              
-                <input
-                  type="submit"
-                  className="btn btn-primary btn-block mt-4"
+        <h4>Company Details</h4>
+
+        <Form onSubmit={this.onSubmit}>
+
+          <FormGroup>
+            <Label for="exampleCompanyName">Job Title</Label>
+            <input
+              type="text"
+              className={classnames("form-control ", {
+                "is-invalid": errors.jobtitle
+              })}
+              name="jobtitle"
+              value={this.state.jobtitle}
+              placeholder="Job Title"
+              onChange={this.onChange}
+            />
+            {errors.jobtitle && (
+              <div className="invalid-feedback">{errors.jobtitle}</div>
+            )}
+          </FormGroup>
+
+          <FormGroup>
+            <Label for="exampleCompanyName">Country</Label>
+            <Input type="text"
+
+              placeholder="Country"
+              name="country"
+              value={this.state.country}
+              onChange={this.onChange}
+            />
+          </FormGroup>
+
+
+          <FormGroup>
+            <Label for="exampleCompanyName">City</Label>
+            <Input type="text"
+
+              placeholder="City"
+              name="city"
+              value={this.state.city}
+              onChange={this.onChange}
+            />
+          </FormGroup>
+
+          <Row form>
+            <Col md={6}>
+              <FormGroup>
+                <Label for="exampleCompanyName">Start Date</Label>
+                <Input type="text"
+                  placeholder="Start Date"
+                  name="start_date"
+                  value={this.state.start_date}
+                  onChange={this.onChange}
                 />
-              </form>
-            </div>
-          </div>
-        </div>
+              </FormGroup>
+            </Col>
+            <Col md={6}>
+              <FormGroup>
+                <Label for="exampleCompanyName">Closing Date</Label>
+                <Input type="text"
+                  placeholder="Closing Date"
+                  name="closing_date"
+                  value={this.state.closing_date}
+                  onChange={this.onChange}
+                />
+              </FormGroup>
+            </Col>
+          </Row>
+
+        
+        
+
+      
+
+         
+
+          <FormGroup>
+            <Label for="exampleCompanyName">Requriment</Label>
+            <Input type="textarea"
+
+              placeholder="Requriemnt"
+              name="requirment"
+              value={this.state.requirment}
+              onChange={this.onChange}
+            />
+          </FormGroup>
+
+          <Row form>
+            <Col md={12}>
+              <FormGroup>
+                <Label for="exampleCompanyName">Job Category</Label>
+                <Input type="text"
+
+                  placeholder="Job Category"
+                  name="job_category"
+                  value={this.state.job_category}
+                  onChange={this.onChange}
+                />
+              </FormGroup>
+            </Col>
+
+            <Col md={12}>
+            <FormGroup>
+            <Label for="exampleCompanyName">Job Type</Label>
+            <Input type="text"
+
+              placeholder="Job Type"
+              name="job_type"
+              value={this.state.job_type}
+              onChange={this.onChange}
+            />
+          </FormGroup>
+
+            </Col>
+
+            <Col md={12}>
+            <FormGroup>
+            <Label for="exampleCompanyName">Expected Salary</Label>
+            <Input type="text"
+              placeholder="Expected Slary"
+              name="expected_salary"
+              value={this.state.expected_salary}
+              onChange={this.onChange}
+            />
+          </FormGroup>
+            </Col>
+
+            <Col md={12}>
+            <FormGroup>
+            <Label for="exampleCompanyName">Job Description</Label>
+            <Input type="text"
+
+              placeholder="Job Description"
+              name="job_description"
+              value={this.state.job_description}
+              onChange={this.onChange}
+            />
+          </FormGroup>
+            </Col>
+
+            <Col md={12}>
+            <FormGroup>
+            <Label for="exampleCompanyName">Job Responsabiliety</Label>
+            <Input type="textarea"
+
+              placeholder="Job Responsbiliety"
+              name="job_responsability"
+              value={this.state.job_responsability}
+              onChange={this.onChange}
+            />
+          </FormGroup>
+            </Col>
+
+            <Col md={12}>
+              <FormGroup>
+               
+              </FormGroup>
+            </Col>
+
+            <Col md={12}>
+              <FormGroup>
+                
+              </FormGroup>
+            </Col>
+
+
+          </Row>
+
+          <Button type="submit" >Sign in</Button>
+
+        </Form>
+
+        <br></br>
+
       </div>
+
+
     );
   }
 }
