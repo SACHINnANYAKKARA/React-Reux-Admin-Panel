@@ -19,7 +19,6 @@ class ProjectTaskItem extends Component {
         <div className="card-header">ID: {project_task.id}</div>
         <div className="card-body">
           <h5 className="card-title text-primary">City : {project_task.city} &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  Country : {project_task.country} &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; Start Date : {project_task.start_date} &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; End Date : {project_task.closing_date} &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;  </h5>
-
           <hr class="list" />
           <Link
             to={`updateProjectTask/${project_task.id}`}

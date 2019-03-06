@@ -10,7 +10,7 @@ class SideBarMenu extends Component {
           <div class="list-group">
 
 
-            <a componentClass={Link} href="/projectBoard" to="/projectBoard" class="list-group-item"><i class="fa fa-credit-card"></i> <span>Profile</span></a>
+            <a componentClass={Link} href="/" to="/" class="list-group-item"><i class="fa fa-question-circle"></i> <span>Profile</span></a>
             <a componentClass={Link} href="/addNewCompany" to="/addNewCompany" class="list-group-item"><i class="fa fa-credit-card"></i> <span>Registor Company</span></a>
             <a componentClass={Link} href="/addNewDepartment" to="/addNewDepartment" class="list-group-item"><i class="fa fa-credit-card"></i> <span>Registor Department</span></a>
             <a componentClass={Link} href="/addNewJob" to="/addNewJob" class="list-group-item"><i class="fa fa-credit-card"></i> <span>Post A Job</span></a>
@@ -27,7 +27,7 @@ class SideBarMenu extends Component {
             <a componentClass={Link} href="/navr" to="/navr" class="list-group-item"><i class="fa fa-credit-card"></i> <span>Change Password</span></a>
             <a componentClass={Link} href="/language" to="/language" class="list-group-item"><i class="fa fa-credit-card"></i><span>Language Proficiency</span></a>
 
-               <br></br>
+             
 
           </div>
         </div>

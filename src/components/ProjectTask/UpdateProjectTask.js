@@ -13,9 +13,17 @@ class UpdateProjectTask extends Component {
     super();
     this.state = {
       id: "",
-      summary: "",
-      acceptanceCriteria: "",
-      status: "",
+      jobtitle: "",
+      city: "",
+      country: "",
+      job_category: "",
+      job_type: "",
+      start_date: "",
+      closing_date: "",
+      expected_salary: "",
+      job_description: "",
+      job_responsability: "",
+      requirment: "",
       errors: {}
     };
     this.onChange = this.onChange.bind(this);
@@ -27,13 +35,21 @@ class UpdateProjectTask extends Component {
       this.setState({ errors: nextProps.errors });
     }
 
-    const { id, summary, acceptanceCriteria, status } = nextProps.project_task;
+    const { id, jobtitle, city, country,job_category,job_type,start_date,closing_date,expected_salary,job_description,job_responsability,requirment } = nextProps.project_task;
 
     this.setState({
       id,
-      summary,
-      acceptanceCriteria,
-      status
+      jobtitle,
+      city,
+      country,
+      job_category,
+      job_type,
+      start_date,
+      closing_date,
+      expected_salary,
+      job_description,
+      job_responsability,
+      requirment
     });
   }
 
@@ -42,13 +58,36 @@ class UpdateProjectTask extends Component {
     this.props.getProjectTask(pt_id);
   }
 
+  /*
+   "id": 3,
+    "jobtitle": "fdf",
+    "city": "Panadrayfda",
+    "country": "Sri Lanka",
+    "job_category": "3",
+    "job_type": "fd",
+    "start_date": "fd",
+    "closing_date": "de",
+    "expected_salary": "dfg",
+    "job_description": "df",
+    "job_responsability": "fd",
+    "requirment": "fd",
+    */
+
   onSubmit(e) {
     e.preventDefault();
     const updatedTask = {
       id: this.state.id,
-      summary: this.state.summary,
-      acceptanceCriteria: this.state.acceptanceCriteria,
-      status: this.state.status
+      jobtitle: this.state.jobtitle,
+      city: this.state.city,
+      country: this.state.country,
+      job_category:this.state.job_category,
+      job_type:this.state.job_type,
+      start_date:this.state.start_date,
+      closing_date:this.state.closing_date,
+      expected_salary:this.state.expected_salary,
+      job_description:this.state.job_description,
+      job_responsability:this.state.job_responsability,
+      requirment:this.state.requirment
     };
 
     this.props.addProjectTask(updatedTask, this.props.history);
@@ -71,43 +110,27 @@ class UpdateProjectTask extends Component {
                 Add /Update Project Task
               </h4>
               <form onSubmit={this.onSubmit}>
-                <div className="form-group">
-                  <input
-                    type="text"
-                    className={classnames("form-control form-control-lg", {
-                      "is-invalid": errors.summary
-                    })}
-                    name="summary"
-                    placeholder="Project Task summary"
-                    value={this.state.summary}
+
+              <div className="form-group">
+                  <textarea
+                    className="form-control form-control-lg"
+                    placeholder="Acceptance Criteria"
+                    name="jobtitle"
+                    value={this.state.jobtitle}
                     onChange={this.onChange}
                   />
-                  {errors.summary && (
-                    <div className="invalid-feedback">{errors.summary}</div>
-                  )}
                 </div>
+
                 <div className="form-group">
                   <textarea
                     className="form-control form-control-lg"
                     placeholder="Acceptance Criteria"
-                    name="acceptanceCriteria"
-                    value={this.state.acceptanceCriteria}
+                    name="city"
+                    value={this.state.city}
                     onChange={this.onChange}
                   />
                 </div>
-                <div className="form-group">
-                  <select
-                    className="form-control form-control-lg"
-                    name="status"
-                    value={this.state.status}
-                    onChange={this.onChange}
-                  >
-                    <option value="">Select Status</option>
-                    <option value="TO_DO">TO DO</option>
-                    <option value="IN_PROGRESS">IN PROGRESS</option>
-                    <option value="DONE">DONE</option>
-                  </select>
-                </div>
+              
                 <input
                   type="submit"
                   className="btn btn-primary btn-block mt-4"
