@@ -61,21 +61,7 @@ class UpdateProjectTask extends Component {
     this.props.getProjectTask(pt_id);
   }
 
-  /*
-   "id": 3,
-    "jobtitle": "fdf",
-    "city": "Panadrayfda",
-    "country": "Sri Lanka",
-    "job_category": "3",
-    "job_type": "fd",
-    "start_date": "fd",
-    "closing_date": "de",
-    "expected_salary": "dfg",
-    "job_description": "df",
-    "job_responsability": "fd",
-    "requirment": "fd",
-    */
-
+ 
   onSubmit(e) {
     e.preventDefault();
     const updatedTask = {

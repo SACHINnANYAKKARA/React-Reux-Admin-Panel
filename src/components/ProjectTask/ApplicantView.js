@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Input, FormGroup, Label, Modal, ModalHeader, ModalBody, ModalFooter, Table, Button } from 'reactstrap';
 import './Men.css';
+import { Link } from "react-router-dom";
 
 class ApplicantView extends Component {
 
@@ -79,9 +80,9 @@ class ApplicantView extends Component {
             editBookModal: !this.state.editBookModal
         });
     }
-    
- 
- 
+
+
+
     _refreshBooks() {
         axios.get('http://localhost:8090/users').then((response) => {
             this.setState({
@@ -100,8 +101,13 @@ class ApplicantView extends Component {
                     <td>{book.e_level}</td>
                     <td>{book.gender}</td>
                     <td>
-                        <Button color="success" size="sm" className="mr-2" >View Applicant</Button>
-                       
+                        <Link
+                            to={`updateProjectTask/${book.id}`}
+                            className="btn btn-primary"
+                        >
+                            View Details
+                        </Link>
+
                     </td>
                 </tr>
             )
@@ -109,7 +115,7 @@ class ApplicantView extends Component {
         return (
             <div className="Appcontainer">
 
-          
+
 
 
                 <table class="ui single line table">

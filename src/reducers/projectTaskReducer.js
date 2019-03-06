@@ -1,7 +1,8 @@
 import {
   GET_PROJECT_TASKS,
   DELETE_PROJECT_TASK,
-  GET_PROJECT_TASK
+  GET_PROJECT_TASK,
+  GET_APPLICANT_USERS
 } from "../actions/types";
 
 const initialState = {
@@ -12,6 +13,12 @@ const initialState = {
 export default function(state = initialState, action) {
   switch (action.type) {
     case GET_PROJECT_TASKS:
+      return {
+        ...state,
+        project_tasks: action.payload
+      };
+
+      case GET_APPLICANT_USERS:
       return {
         ...state,
         project_tasks: action.payload
