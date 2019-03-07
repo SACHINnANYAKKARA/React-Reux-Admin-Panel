@@ -47,9 +47,11 @@ export const getApplicantTask = (pt_id, history) => async dispatch => {
     dispatch({
       type: GET_APPLICANT_USERS,
       payload: res.data
+      
+    
     });
   } catch (error) {
-  //  history.push("/");
+   history.push("/");
   }
 };
 

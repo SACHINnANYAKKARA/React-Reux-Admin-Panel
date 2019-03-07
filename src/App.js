@@ -19,7 +19,7 @@ import AddNewDepartment from "./components/ProjectTask/AddNewDepartment";
 import DepartmentUpdateDelete from "./components/ProjectTask/DepartmentUpdateDelete";
 import JobUpdateDelete from "./components/ProjectTask/JobUpdateDelete";
 import ApplicantView from "./components/ProjectTask/ApplicantView";
-
+import ApplicationUserView from "./components/ProjectTask/ApplicationUserView";
 
 /*addProjectViewTask*/
 /*AddProjectView*/
@@ -32,7 +32,7 @@ class App extends Component {
           <div className="App">
 
             <NavigationBar />
-            
+
             <SideBarMenu />
 
 
@@ -51,6 +51,7 @@ class App extends Component {
                   <Route exact path="/departmentUpdateDelete" component={DepartmentUpdateDelete} />
                   <Route exact path="/jobUpdateDelete" component={JobUpdateDelete} />
                   <Route exact path="/applicantView" component={ApplicantView} />
+                  <Route exact path="/applicationUserView/:id" component={ApplicationUserView} />
                 </Col>
                 <Route
                   exact

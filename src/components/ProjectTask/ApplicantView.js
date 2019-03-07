@@ -102,7 +102,8 @@ class ApplicantView extends Component {
                     <td>{book.gender}</td>
                     <td>
                         <Link
-                            to={`updateProjectTask/${book.id}`}
+
+                            to={`applicationUserView/${book.id}`}
                             className="btn btn-primary"
                         >
                             View Details
