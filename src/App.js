@@ -20,6 +20,15 @@ import DepartmentUpdateDelete from "./components/ProjectTask/DepartmentUpdateDel
 import JobUpdateDelete from "./components/ProjectTask/JobUpdateDelete";
 import ApplicantView from "./components/ProjectTask/ApplicantView";
 import ApplicationUserView from "./components/ProjectTask/ApplicationUserView";
+import RegistorInterviewer from "./components/ProjectTask/RegistorInterviewer";
+import ViewInterviewer from "./components/ProjectTask/ViewInterviewer";
+import InterviewerProfile from "./components/ProjectTask/InterviewerProfile";
+import AddMeeting from "./components/ProjectTask/AddMeeting";
+import ViewMeeting from "./components/ProjectTask/ViewMeeting";
+
+
+
+
 
 /*addProjectViewTask*/
 /*AddProjectView*/
@@ -51,7 +60,12 @@ class App extends Component {
                   <Route exact path="/departmentUpdateDelete" component={DepartmentUpdateDelete} />
                   <Route exact path="/jobUpdateDelete" component={JobUpdateDelete} />
                   <Route exact path="/applicantView" component={ApplicantView} />
+                  <Route exact path="/registorInterviewer" component={RegistorInterviewer} />
+                  <Route exact path="/viewInterviewer" component={ViewInterviewer} />
+                  <Route exact path="/interviewerProfile" component={InterviewerProfile} />
                   <Route exact path="/applicationUserView/:id" component={ApplicationUserView} />
+                  <Route exact path="/addMeeting" component={AddMeeting} />
+                  <Route exact path="/viewMeeting" component={ViewMeeting} />
                 </Col>
                 <Route
                   exact
