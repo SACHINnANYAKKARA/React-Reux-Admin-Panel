@@ -3,9 +3,6 @@ import axios from 'axios';
 import { Input, FormGroup, Label, Modal, ModalHeader, ModalBody, ModalFooter, Table, Button } from 'reactstrap';
 import './Men.css';
 
-import React, { Component } from 'react';
-import axios from 'axios';
-import { Input, FormGroup, Label, Modal, ModalHeader, ModalBody, ModalFooter, Table, Button } from 'reactstrap';
 
 /*
  {
@@ -151,7 +148,7 @@ class Author extends Component {
         </Modal>
 
 
-        <Table>
+        <Table class="ui single line table">
           <thead>
             <tr>
               <th>#</th>

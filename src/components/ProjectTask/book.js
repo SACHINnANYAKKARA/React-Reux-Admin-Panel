@@ -22,7 +22,8 @@ class book extends Component {
   }
   
   */
-    
+  //  
+
     state = {
   
       books: [],
@@ -339,7 +340,7 @@ class book extends Component {
         </Modal>
   
   
-          <Table>
+          <Table class="ui single line table">
             <thead>
               <tr>
                 <th>#</th>

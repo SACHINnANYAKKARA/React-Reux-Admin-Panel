@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { Input, FormGroup, Label, Modal, ModalHeader, ModalBody, ModalFooter, Table, Button } from 'reactstrap';
 import './Men.css';
-
+//
 class newsPaper extends Component {
     state = {
       newspapers: [],
@@ -187,7 +187,7 @@ class newsPaper extends Component {
           </Modal>
   
   
-          <Table>
+          <Table class="ui single line table">
             <thead>
               <tr>
                 <th>#</th>
