@@ -26,9 +26,12 @@ import InterviewerProfile from "./components/ProjectTask/InterviewerProfile";
 import AddMeeting from "./components/ProjectTask/AddMeeting";
 import ViewMeeting from "./components/ProjectTask/ViewMeeting";
 
-
-
-
+import Author from "./components/ProjectTask/Author";
+import book from "./components/ProjectTask/book";
+import Category from "./components/ProjectTask/Category";
+import Magazine from "./components/ProjectTask/Magazine";
+import ManuScript from "./components/ProjectTask/ManuScript";
+import newsPaper from "./components/ProjectTask/newsPaper";
 
 /*addProjectViewTask*/
 /*AddProjectView*/
@@ -53,6 +56,12 @@ class App extends Component {
                   <Route exact path="/" component={ProjectBoard} />
                   <Route exact path="/addProjectViewTask" component={ProjectView} />
                   <Route exact path="/addProjectTask" component={AddProjectTask} />
+                  <Route exact path="/author" component={Author} />
+                  <Route exact path="/book" component={book} />
+                  <Route exact path="/category" component={Category} />
+                  <Route exact path="/magazine" component={Magazine} />
+                  <Route exact path="/manuScript" component={ManuScript} />
+                  <Route exact path="/newsPaper" component={newsPaper} />
                   <Route exact path="/addProjectView" component={AddProjectView} />
                   <Route exact path="/addNewCompany" component={AddNewCompany} />
                   <Route exact path="/addNewJob" component={AddNewJob} />
