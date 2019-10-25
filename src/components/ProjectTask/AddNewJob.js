@@ -20,7 +20,7 @@ class AddNewJob extends Component {
             closing_date: "",
             expected_salary: "",
             job_description: "",
-            job_responsability: "",
+            job_responsibility: "",
             requirment: "",
             errors: {}
         };
