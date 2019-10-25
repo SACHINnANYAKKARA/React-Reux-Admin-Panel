@@ -14,7 +14,7 @@ export default class InterviewerProfile extends Component {
         this.onChangeBirthDate = this. onChangeBirthDate.bind(this);
         this.onChangeJobRole = this.onChangeJobRole.bind(this);
         this.onChangeWorkingExperiance = this.onChangeWorkingExperiance.bind(this);
-        this.onChangeResponsability = this.onChangeResponsability.bind(this);
+        this.onChangeResponsibility = this.onChangeResponsibility.bind(this);
         this.onChangeCompanyName = this.onChangeCompanyName.bind(this);
         this.onSubmit = this.onSubmit.bind(this);
 
@@ -25,7 +25,7 @@ export default class InterviewerProfile extends Component {
             birth_date: "",
             job_role: "",
             working_experiance: "",
-            responsability: "",
+            responsibility: "",
             comapny_name: "",
             id: '2'
 
@@ -43,7 +43,7 @@ export default class InterviewerProfile extends Component {
                     birth_date: response.data.birth_date,
                     job_role: response.data.job_role,
                     working_experiance: response.data.working_experiance,
-                    responsability: response.data.responsability,
+                    responsibility: response.data.responsibility,
                     comapny_name: response.data.comapny_name,
                                      
 
@@ -84,9 +84,9 @@ export default class InterviewerProfile extends Component {
         });
     }
 
-    onChangeResponsability(e) {
+    onChangeResponsibility(e) {
         this.setState({
-            responsability: e.target.value
+            responsibility: e.target.value
         })
     }
 
@@ -105,7 +105,7 @@ export default class InterviewerProfile extends Component {
             birth_date: this.state.birth_date,
             job_role: this.state.job_role,
             working_experiance: this.state.working_experiance,
-            responsability: this.state.responsability,
+            responsibility: this.state.responsibility,
             comapny_name: this.state.comapny_name
            
 
@@ -161,8 +161,8 @@ export default class InterviewerProfile extends Component {
 
                         <Col md={12}>
                             <FormGroup>
-                                <Label for="Phone Number">Responsabiliety</Label>
-                                <Input type="text" value={this.state.responsability} onChange={this.onChangeResponsability} placeholder="Resposnabiliety" />
+                                <Label for="Phone Number">Responsibility</Label>
+                                <Input type="text" value={this.state.responsibility} onChange={this.onChangeResponsitypo fixbility} placeholder="Resposnabiliety" />
                             </FormGroup>
                         </Col>
 
