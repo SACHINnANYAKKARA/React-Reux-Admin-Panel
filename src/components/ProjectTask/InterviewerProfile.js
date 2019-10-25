@@ -161,7 +161,7 @@ export default class InterviewerProfile extends Component {
 
                         <Col md={12}>
                             <FormGroup>
-                                <Label for="Phone Number">Responsabiliety</Label>
+                                <Label for="Phone Number">Responsibility</Label>
                                 <Input type="text" value={this.state.responsibility} onChange={this.onChangeResponsitypo fixbility} placeholder="Resposnabiliety" />
                             </FormGroup>
                         </Col>
