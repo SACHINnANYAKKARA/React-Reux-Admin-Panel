@@ -12,7 +12,7 @@ class ViewInterviewer extends Component {
     "birth_date": "ds",
     "job_role": "ds",
     "working_experiance": "ds",
-    "responsability": "sd",
+    "responsibility": "sd",
     "comapny_name": "ds",
 */
 
@@ -24,7 +24,7 @@ class ViewInterviewer extends Component {
             birth_date: '',
             job_role: '',
             working_experiance: '',
-            responsability: '',
+            responsibility: '',
             comapny_name: ''
         },
 
@@ -35,7 +35,7 @@ class ViewInterviewer extends Component {
             birth_date: '',
             job_role: '',
             working_experiance: '',
-            responsability: '',
+            responsibility: '',
             comapny_name: ''
         },
 
