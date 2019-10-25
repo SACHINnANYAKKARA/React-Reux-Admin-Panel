@@ -16,7 +16,7 @@ class JobUpdateDelete extends Component {
         "closing_date": "de",
         "expected_salary": "3",
         "job_description": "df",
-        "job_responsability": "fd",
+        "job_responsibility": "fd",
         "requirment": "fd",
       */
 
@@ -32,7 +32,7 @@ class JobUpdateDelete extends Component {
             closing_date: '',
             expected_salary: '',
             job_description: '',
-            job_responsability: '',
+            job_responsibility: '',
             requirment: ''
         },
 
