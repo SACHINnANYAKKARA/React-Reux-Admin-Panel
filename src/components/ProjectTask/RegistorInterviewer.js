@@ -13,7 +13,7 @@ import './Men.css';
     "birth_date": "ds",
     "job_role": "ds",
     "working_experiance": "ds",
-    "responsability": "sd",
+    "responsibility": "sd",
     "comapny_name": "ds",
 */
 
@@ -27,7 +27,7 @@ class RegistorInterviewer extends Component {
             birth_date: "",
             job_role: "",
             working_experiance: "",
-            responsability: "",
+            responsibility: "",
             comapny_name: "",
             errors: {}
         };
@@ -53,7 +53,7 @@ class RegistorInterviewer extends Component {
             birth_date: this.state.birth_date,
             job_role: this.state.job_role,
             working_experiance: this.state.working_experiance,
-            responsability: this.state.responsability,
+            responsibility: this.state.responsibility,
             comapny_name: this.state.comapny_name
 
 
@@ -137,12 +137,12 @@ class RegistorInterviewer extends Component {
                         </FormGroup>
 
                         <FormGroup>
-                        <Label for="exampleCompanyName">Responsability</Label>
+                        <Label for="exampleCompanyName">Responsibility</Label>
                             <Input type="text"
 
-                                placeholder="Responsability"
-                                name="responsability"
-                                value={this.state.responsability}
+                                placeholder="Responsibility"
+                                name="responsibility"
+                                value={this.state.responsibility}
                                 onChange={this.onChange}
                             />
                         </FormGroup>
