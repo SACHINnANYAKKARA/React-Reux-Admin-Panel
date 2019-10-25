@@ -25,7 +25,7 @@ class UpdateProjectTask extends Component {
       closing_date: "",
       expected_salary: "",
       job_description: "",
-      job_responsability: "",
+      job_responsbility: "",
       requirment: "",
       errors: {}
     };
@@ -51,7 +51,7 @@ class UpdateProjectTask extends Component {
       closing_date,
       expected_salary,
       job_description,
-      job_responsability,
+      job_responsibility,
       requirment
     });
   }
